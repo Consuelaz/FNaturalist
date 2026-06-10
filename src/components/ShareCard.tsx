@@ -30,7 +30,7 @@ export default function ShareCard({ trigger }: ShareCardProps) {
     if (showPreview) {
       loadStats()
       // Generate local QR code
-      const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://naturalist.example.com'
+      const baseUrl = typeof window !== 'undefined' ? window.location.origin : 'https://fieldnaturalist.fun'
       setQrCodeUrl(`/api/qrcode?url=${encodeURIComponent(baseUrl)}&size=160`)
     }
   }, [showPreview])
