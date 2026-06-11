@@ -36,7 +36,6 @@ export default function UploadZone({ onFileSelect }: UploadZoneProps) {
     const input = document.createElement('input')
     input.type = 'file'
     input.accept = 'image/*'
-    input.capture = 'environment'
     input.onchange = (e) => {
       const file = (e.target as HTMLInputElement).files?.[0]
       if (file) onFileSelect(file)
@@ -80,12 +79,12 @@ export default function UploadZone({ onFileSelect }: UploadZoneProps) {
         <p className="text-sage-500 mb-4">{lang === 'zh' ? '或' : 'or'}</p>
         <span className="inline-flex items-center gap-2 btn-primary">
           <Image className="w-4 h-4" />
-          {lang === 'zh' ? '选择文件 / 拍照' : 'Browse / Take Photo'}
+          {lang === 'zh' ? '选择图片 / 拍照' : 'Choose / Take Photo'}
         </span>
 
         <div className="mt-6 pt-6 border-t border-sage-100">
           <p className="text-xs text-sage-400">
-            {lang === 'zh' ? '支持 JPG、PNG、WebP 格式 · 手机可直接拍照' : 'Supports JPG, PNG, WebP · Camera on mobile'}
+            {lang === 'zh' ? '支持 JPG、PNG、WebP 格式 · 可拍照或从相册选择' : 'Supports JPG, PNG, WebP · Camera or album'}
           </p>
         </div>
       </div>
